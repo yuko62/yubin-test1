@@ -1,0 +1,14 @@
+#FORMで定義しないCLASS定義を追加
+
+{% extends "base.html" %}
+{% block content %}
+#CLASSにh-adrを追加
+    <form method="post" class="h-adr">
+    {% csrf_token %}
+#CLASSにp-country-nameを追加
+    <span class="p-country-name" style="display:none;">Japan</span>
+    {{ form }}
+    <button type="submit">save</button>
+    </form>
+
+{% endblock %}
